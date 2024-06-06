@@ -1,0 +1,91 @@
+<div class="container mt-5">
+    <h3 style="text-align: center;">Student Admission Form</h3>
+    <div class="d-flex justify-content-end mb-3">
+      <button  (click)="goToStudentList()" type="button" class="btn btn-primary">Student List</button>
+    </div>
+   <div class="studentForm">
+    <form  [formGroup]="admissionForm" (ngSubmit)="onSubmit()">
+        <div  class="mb-3">
+          <div class="mb-3">
+            <label  class="form-label">First Name</label>
+            <input type="text"  class="form-control" formControlName="firstName">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">Last Name</label>
+            <input type="text"  class="form-control" formControlName="lastName">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Gender</label>
+            <div class="form-check">
+              <input type="radio" name="gender"  class="form-check-input" formControlName="gender" value="Male">
+              <label for="genderMale" class="form-check-label">Male</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" name="gender"  class="form-check-input" formControlName="gender" value="Female">
+              <label for="genderFemale" class="form-check-label">Female</label>
+            </div>
+    
+     
+    
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Previous School</label>
+            <input type="text"  class="form-control" formControlName="previousSchool">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Previous Class</label>
+            <input type="text" class="form-control" formControlName="previousClass">
+          </div>
+        </div>
+    
+        <div  class="mb-3">
+          <h3>Student Contact</h3>
+          <div class="mb-3">
+            <label  class="form-label">Mobile Number</label>
+            <input type="number"  class="form-control" formControlName="mobileNumber">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">Parent Mobile Number</label>
+            <input type="number"  class="form-control" formControlName="parentMobileNumber">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">Address</label>
+            <input type="text"  class="form-control" formControlName="address">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">City</label>
+            <input type="text"  class="form-control" formControlName="city">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">State</label>
+            <input type="text"  class="form-control" formControlName="state">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">Pincode</label>
+            <input type="number"  class="form-control" formControlName="pincode">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">Email</label>
+            <input type="email" class="form-control" formControlName="email">
+          </div>
+        </div>
+    
+        <div  class="mb-3">
+          <h3>Student Academic</h3>
+          <div class="mb-3">
+            <label  class="form-label">Previous Grades</label>
+            <input type="text"  class="form-control" formControlName="previousGrades">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">Favorite Subject</label>
+            <input type="text"  class="form-control" formControlName="favoriteSubject">
+          </div>
+        </div>
+    
+        <div  align="end">
+          <button type="submit" class="btn btn-primary" >Submit</button>
+        </div>
+      </form>
+   </div>
+  </div>
+  

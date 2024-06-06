@@ -1,0 +1,13 @@
+<!-- <div>
+    <h1>Parent Component</h1>
+    <app-child 
+
+      *ngFor="let item of items" 
+      [item]="item" 
+      (itemClicked)="onItemClicked($event)">
+    </app-child>
+  </div> -->
+
+  <button (click)="toggleChild()">Toggle Child</button>
+  <app-child *ngIf="showChild" [inputData]="parentData"></app-child>
+  

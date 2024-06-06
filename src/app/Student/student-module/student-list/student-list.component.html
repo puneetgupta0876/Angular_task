@@ -1,0 +1,55 @@
+
+  <div class="text-center mt-4">
+    <h4>Student List</h4>
+  </div>
+
+  <div class="d-flex justify-content-end mb-3">
+    <button (click)="goToStudentForm()" type="button" class="btn btn-primary">Add Student</button>
+  </div>
+
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Previous School</th>
+      <th scope="col">Previous Class</th>
+      <th scope="col">Mobile Number</th>
+      <th scope="col">Parent Mobile Number</th>
+      <th scope="col">Address</th>
+      <th scope="col">City</th>
+      <th scope="col">State</th>
+      <th scope="col">Pincode</th>
+      <th scope="col">Email</th>
+      <th scope="col">Previous Grades</th>
+      <th scope="col">Favorite Subject</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ student.firstName }}</td>
+      <td>{{ student.lastName }}</td>
+      <td>{{ student.gender }}</td>
+      <td>{{ student.previousSchool }}</td>
+      <td>{{ student.previousClass }}</td>
+      <td>{{ student.mobileNumber }}</td>
+      <td>{{ student.parentMobileNumber }}</td>
+      <td>{{ student.address }}</td>
+      <td>{{ student.city }}</td>
+      <td>{{ student.state }}</td>
+      <td>{{ student.pincode }}</td>
+      <td>{{ student.email }}</td>
+      <td>{{ student.previousGrades }}</td>
+      <td>{{ student.favoriteSubject }}</td>
+      <td>
+        <!-- Button to view individual student data -->
+        <button (click)="viewStudentDetails(i)" class="btn btn-info">View Details</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
